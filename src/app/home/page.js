@@ -1,4 +1,6 @@
 import "./home.css";
+import Navbar from "../components/navbar/navbar";
+
 
 export default function Home() {
   return (
@@ -7,7 +9,7 @@ export default function Home() {
         <h1>ecode qr story hub</h1>
       </div>
       <div className="navbar">
-        {/* insert navbar component here */}
+        <Navbar/>
         </div>
     </div>
   );
