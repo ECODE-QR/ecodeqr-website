@@ -2,6 +2,7 @@ import "./home.css";
 import Navbar from "../components/navbar/navbar";
 
 
+
 export default function Home() {
   return (
     <div className="mainContainer">
@@ -10,6 +11,9 @@ export default function Home() {
       </div>
       <div className="navbar">
         <Navbar/>
+        </div>
+        <div>
+          <img src={'ecode-logo.gif'}/>
         </div>
     </div>
   );
