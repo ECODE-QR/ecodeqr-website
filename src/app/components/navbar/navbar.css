@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,700;1,700&display=swap');
+
+
 .navbar {
-    background-color: #333;
+    background-color: #0a0a0a;
     padding: 10px;
   }
   
@@ -8,12 +11,20 @@
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+
+   
   }
   
   .navbar-item {
     color: white;
     padding: 10px;
+    font-family: "Roboto Mono", monospace;
+
+    
+  }
+  .navbar-item:hover {
+    color: #ffe656;
   }
   
   /* Media query for mobile view */
@@ -25,3 +36,9 @@
     }
   }
   
+
+  @media(max-width: 767px) {
+     .navbar-list {
+      flex-direction: row;
+     }
+  }

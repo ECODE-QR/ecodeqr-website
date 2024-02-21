@@ -2,6 +2,10 @@
 'use Client'; 
 import React from 'react';
 import Story from '../slideShowFunction/slideShowFunction';
+import "./slideshowLayout.css";
+
+
+
 
 const images = [
     './16.png',
@@ -12,7 +16,7 @@ const images = [
 
 const App = () => {
   return (
-    <div>
+    <div className="story-container">
       <Story images={images} />
     </div>
   );
