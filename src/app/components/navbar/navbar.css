@@ -1,27 +1,61 @@
 .navbar {
-    background-color: #333;
-    padding: 10px;
-  }
-  
+  background-color: #020403;
+  padding: 10px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar-item {
+  color: white;
+  padding: 10px;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
   .navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .navbar-item {
-    color: white;
-    padding: 10px;
-  }
-  
-  /* Media query for mobile view */
-  @media (max-width: 768px) {
-    .navbar-list {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-  
+}
+
+/* Styles for Orbitron font */
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Additional styles for navbar links */
+.navbar-list li a {
+  color: #ffffff!important;
+  font-size: 16px!important;
+  font-weight: 900!important;
+  border-bottom: 2px solid transparent; /* Initially set a transparent border */
+  transition: border-color 0.3s; /* Add a transition for smooth animation */
+}
+
+.navbar-list li a:hover {
+  border-color: #ffffff!important; /* Change the border color on hover */
+}
+
+/* Styles for SVG icons */
+.navbar-list li svg > * {
+  fill: #ffffff!important;
+}
+
+.navbar-list li svg path {
+  fill: #ffffff!important;
+}
+
+/* Style for active link */
+a.link-active {
+  border-bottom-color: #fff!important;
+}

@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     text-transform: uppercase;
+    background-color: #020403;
+    height: 15vh;
+    padding: 3vh;
 }
 img{
     width: 100vw;
