@@ -1,9 +1,11 @@
-/* .navbar {
+/* Original Styling
+
+.navbar {
     background-color: #333;
     padding: 10px;
   }
   
-  .navbar-list {
+.navbar-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -11,10 +13,13 @@
     justify-content: space-between;
   }
   
-  .navbar-item {
+.navbar-item {
     color: white;
     padding: 10px;
   } */
+
+
+  /* Newer styling, could probably be simplified */
   
 .navbar {
   display: flex;
@@ -23,16 +28,17 @@
   color: white;
   background-color: black;
   justify-content: center;
+  align-items: center;
 }
 
-.navbar ul {
-  float: left;
+.navbar-list {
   list-style: none;
-  display: block;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.navbar ul li {
-  float: left;
+.navbar-item {
   list-style: none;
   display: block;
   width: 210px;
@@ -59,31 +65,59 @@ ul li a:hover{
   font-weight: bold;
 }
 
-.navbar ul li ul li{
-  margin-bottom: 0;
+/* Hamburger icon */
+.menu-icon {
   display: none;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(148, 148, 148,0.2);
+  border-radius: 10px;
+  padding:0 5px 0 5px;
 }
 
-.navbar ul li:hover ul li {
-    display: block;
+/* Hide items by default on mobile and show when menu is open */
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-list.open {
+  flex-direction: column;
 }
   
-/* Media query for mobile view */
-/* @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-} */
-  
+/* Phones and smaller devices */
 
-@media only screen and (min-width:250px) {
+@media only screen and (max-width:768px) {
   .main {
     padding-top: 150px;
   }
-  .container {
-    width: 80%;
+
+  /* weird colors to help with positioning */
+  .navbar {
+    display: flex;
+    width: 100%;
+    z-index: 1;
+    background-color: red;
+  }
+  .navbar-list {
+    background-color: green;
+    width: 100%;
+  }
+
+  a {
+    background-color: black;
+
+  }
+
+  /* menu button positioning */
+  .menu-icon {
+    position:absolute;
+    left: 20px;
+    top: 20px;
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    font-style: none;
   }
   h1 {
     font-size: 30px;
@@ -93,41 +127,30 @@ ul li a:hover{
   }
 }
   
-@media only screen and (min-width:768px) {
-  .main {
-    padding-top: 150px;
+  /* can probably move these to the media query above */
+@media only screen and (max-width:768px) {
+  .navbar-list {
+    display: none;
+    flex-direction: column;
   }
-  .container {
-    width: 80%;
+
+  .navbar-list.open {
+    display: flex;
   }
-  h1 {
-    font-size: 48px;
-  }
-  h2 {
-    font-size: 28px;
-  }
-  .footer {
-    padding: 70px 0
-  }
-  .footer ul {
-    margin-top: 15px
-  }
-  .footer ul li {
-    display: inline-block;
-    margin: 0 0 0 10px
-  }
- 
-  .footer .foot-content-left {
-    float: left
-  }
-  .footer .foot-content {
-    float: right
+
+  .navbar-item {
+    width: 100%;
+    margin: 5px 0;
   }
 }
 
-@media only screen and (min-width:992px) {
-  .container {
+/* For tablets and small screen laptops */
+
+@media only screen and (min-width:769px) {
+  .navbar-list {
     width: 80%;
+    flex-direction: row;
+    justify-content: center;
   }
   h1 {
     font-size: 60px;
@@ -136,84 +159,4 @@ ul li a:hover{
     font-size: 28px;
   }
 
-}
-
-@media only screen and (min-width:1200px) {
-  .container {
-    width: 1160px;
-    width: 80%;
-  }
-  h1 {
-    font-size: 80px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
 }
