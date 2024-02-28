@@ -1,5 +1,6 @@
 .mainContainer{
     justify-content: center;
+    background-color: black;
 }
 .header{
     display: flex;
