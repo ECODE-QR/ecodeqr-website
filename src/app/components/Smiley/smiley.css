@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.AboutSection {
+    height: 60vh;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.AboutContent {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.smile-image {
+    height: 400px;
+    width: auto;
+    animation: planet 5s infinite ease-in-out;
+    
+}
+
+.head {
+    font-size: 4rem;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+@keyframes planet {
+ 0%, 100% {
+        transform: translate(0, 0) rotate(-40deg);
+    } 
+ /* 50% {
+     transform: translate(0, 30px) rotate(-20deg);
+ } */
+ 50% {
+    transform: translate(200px, 0) rotate(60deg);
+}
+}
+
+.box1 {
+    height: 150px;
+    width: 300px;
+    background-color: #0a0a0a;
+    border-radius: 20px;
+    position: relative;
+    right: 300px;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: "Inter", sans-serif;
+   
+}
+
+.box2 {
+    height: 150px;
+    width: 300px;
+    background-color: #0a0a0a;
+    border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: "Inter", sans-serif;
+   position: relative;
+    right: 200px;
+   
+}
+ 
+.boxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    
+}
+
+span {
+    color: yellow;
+}
+
+@media(max-width: 767px) {
+    .head {
+        font-size: 1.2rem;
+    }
+
+    .AboutContent {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .AboutSection {
+        flex-direction: column;
+        justify-content: center;
+       align-items: center;
+    }
+
+    .smile-image {
+        height: 180px;
+        width: auto;
+        position: relative;
+        left: -20px;
+        
+        
+    }
+
+    .boxes {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .box1 {
+        height: 100px;
+        width: 150px;
+        right: 0;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+    .box2 {
+        height: 100px;
+        width: 150px;
+        font-size: 0.7rem;
+        right: 0;
+        text-align: center;
+    }
+
+    .image-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+  
+}

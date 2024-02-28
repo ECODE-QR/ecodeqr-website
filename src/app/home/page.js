@@ -3,6 +3,7 @@ import Navbar from "../components/navbar/navbar";
 
 
 
+
 export default function Home() {
   return (
     <div className="mainContainer">
@@ -13,8 +14,9 @@ export default function Home() {
         <Navbar/>
         </div>
         <div>
-          <img src={'ecode-logo.gif'}/>
+          <img src='/ecode-logo.gif'/>
         </div>
+        
     </div>
   );
 }
