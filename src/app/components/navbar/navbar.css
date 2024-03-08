@@ -43,7 +43,7 @@
   list-style: none;
   display: block;
   width: 210px;
-  background-color: rgba(148, 148, 148,0.2);
+  /* background-color: rgba(148, 148, 148,0.2); */
   font-size: 20px;
   text-align: center;
   text-decoration: none;
@@ -60,19 +60,23 @@
   color: inherit; /* Inherit text color from parent */
 }
 
-/* Hover effect with brackets */
+/* Hover effect with literal 'char' brackets */
+
+/*
+
 .navbar-item a:hover::before {
   content: '[';
-  margin-right: 5px; /* Adjust as needed */
+  margin-right: 5px; 
   color: white;
 }
 
 .navbar-item a:hover::after {
   content: ']';
-  margin-left: 5px; /* Adjust as needed */
+  margin-left: 5px; 
   color: white;
 }
 
+*/
 
 ul li a {
   display: block;
@@ -103,6 +107,22 @@ ul li a:hover{
   color: rgb(255, 238, 0);
   font-size: 25px;
   font-weight: bold;
+
+  /*bracket code*/
+  
+  --b: 5px;   /* thickness of the border */
+  --c: white;   /* color of the border */
+  --w: 20px;  /* width of border */
+  
+
+  border: var(--b) solid #0000; /* space for the border */
+  --_g: #0000 90deg,var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
 }
 
 /* Hamburger icon */
