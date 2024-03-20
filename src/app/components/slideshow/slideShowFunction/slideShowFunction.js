@@ -75,6 +75,8 @@ const Story = ({ images }) => {
     setProgress(0);
   };
 
+  
+
   return (
     <StoryContainer onClick={handleClick}>
       <ProgressBarContainer>
