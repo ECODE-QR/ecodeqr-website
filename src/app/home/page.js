@@ -14,7 +14,7 @@ export default function Home() {
         <Navbar/>
         </div>
         <div>
-          <img src='/ecode-logo.gif'/>
+          <img src='/ecode-logo.gif' className="EcodeGif"/>
         </div>
         
     </div>

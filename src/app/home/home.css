@@ -1,6 +1,7 @@
 .mainContainer{
     justify-content: center;
     background-color: black;
+    /* height: 100vh; */
 }
 .header{
     display: flex;
@@ -11,6 +12,10 @@
     padding: 3vh;
 }
 img{
-    width: 100vw;
+    width: 90vw;
+    object-fit: fill;
 }
-
+/* 
+.EcodeGif {
+    overflow: auto;
+} */
