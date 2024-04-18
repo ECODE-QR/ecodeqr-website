@@ -1,20 +1,20 @@
 'use client';
 
 import React from 'react'
-import './story3.css'
+import './story5.css'
 // import App from '../components/slideshow/slideshowLayout/slideshowLayout'
 import Story from '../components/slideshow/slideShowFunction/slideShowFunction';
 
-const worldImages = [
-  './planet1.png',
-  './planet2.png',
-  './planet3.png',
+const headImages = [
+  './head1.png',
+  './head2.png',
+  './head3.png',
 
 ];
 
 
 export default function page() {
   return (
-    <div><Story images={worldImages} /></div>
+    <div><Story images={headImages} /></div>
   )
 }
