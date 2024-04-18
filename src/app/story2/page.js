@@ -6,9 +6,9 @@ import './story2.css'
 import Story from '../components/slideshow/slideShowFunction/slideShowFunction';
 
 const renaissanceImages = [
-  './35.png',
-  './36.png',
-  './37.png',
+  './david1.png',
+  './david2.png',
+  './david3.png',
 
 ];
 
