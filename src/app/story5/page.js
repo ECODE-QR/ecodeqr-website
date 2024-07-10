@@ -15,6 +15,6 @@ const headImages = [
 
 export default function page() {
   return (
-    <div><Story images={headImages} /></div>
+    <div className="fullscreen-container"><Story images={headImages} /></div>
   )
 }

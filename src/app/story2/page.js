@@ -15,6 +15,6 @@ const renaissanceImages = [
 
 export default function page() {
   return (
-    <div><Story images={renaissanceImages} /></div>
+    <div className="fullscreen-container"><Story images={renaissanceImages} /></div>
   )
 }
