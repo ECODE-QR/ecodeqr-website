@@ -15,6 +15,6 @@ const bearImages = [
 
 export default function page() {
   return (
-    <div><Story images={bearImages} /></div>
+    <div className="fullscreen-container"><Story images={bearImages} /></div>
   )
 }

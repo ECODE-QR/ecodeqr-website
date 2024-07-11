@@ -147,6 +147,345 @@ span {
 
   
 }
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/navbar/navbar.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+
+/* 
+.navbar {
+    background-color: #333;
+    padding: 10px;
+  }
+   */
+.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+/* .navbar-item {
+    color: white;
+    padding: 10px;
+  }  */
+
+
+  
+/* Existing styling */
+.navbar {
+  display: flex;
+  width: 90vw;
+  height: 10vh;
+  color: white;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.navbar-item {
+  list-style: none;
+  display: block;
+  width: 210px;
+  /* background-color: rgba(148, 148, 148,0.2); */
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px;
+  border-radius: 25px;
+}
+
+.navbar-item a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none; /* Ensure text decoration is none for clarity */
+  color: inherit; /* Inherit text color from parent */
+}
+
+#menu-toggle {
+  visibility: hidden;
+}
+
+
+ul li a {
+  display: block;
+  cursor:context-menu;
+}
+
+ul li a:hover{
+  display: block;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 238, 0);
+  font-size: 25px;
+  font-weight: bold;
+
+  /*bracket code*/
+  
+  --b: 5px;   /* thickness of the border */
+  --c: white;   /* color of the border */
+  --w: 20px;  /* width of border */
+  
+
+  border: var(--b) solid #0000; /* space for the border */
+  --_g: #0000 90deg,var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
+}
+
+
+/* Hide items by default on mobile and show when menu is open */
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-list.open {
+  flex-direction: column;
+}
+  
+/* Phones and smaller devices */
+
+@media only screen and (max-width:768px) {
+  /* .main {
+    padding-top: 150px;
+  }
+
+   .navbar {
+    display: inline-block;
+    width: 0%;
+    height: 0%;
+    z-index: 1;
+  }
+
+  .navbar-list {
+    background-color: black;
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+  }
+
+  .navbar-list.open{
+    display: inline-block;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 18vh;
+    height: 35vh;
+
+    z-index: 1;
+  }
+
+  .navbar-item {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    height: 52px;
+  }
+
+  .navbar-item a {
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+  }
+
+
+   .menu-icon {
+    position:absolute;
+    left: 20px;
+    top: 10vh;
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    font-style: none;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar-list.open {
+    display: flex;
+  }
+
+  .navbar-item {
+    width: 100%;
+    margin: 5px 0;
+  }
+ */
+ /* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: "Poppins", sans-serif;
+   background: #050100;
+ }
+ 
+ .container {
+   max-width: 1050px;
+   width: 90%;
+   margin: auto;
+ }
+ 
+ .navbar {
+   width: 100%;
+   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+ }
+ 
+ .nav-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 62px;
+ }
+ 
+ .navbar .menu-items {
+   display: flex;
+ }
+ 
+ .navbar .nav-container li {
+   list-style: none;
+ }
+ 
+ .navbar .nav-container a {
+   text-decoration: none;
+   color: black;
+   font-weight: 500;
+   font-size: 1.2rem;
+   padding: 0.7rem;
+ }
+ 
+ .navbar .nav-container a:hover{
+     font-weight: bolder;
+ }
+ 
+ .nav-container {
+   display: block;
+   position: relative;
+   height: 60px;
+ }
+ 
+ .nav-container .checkbox {
+   position: absolute;
+   display: block;
+   height: 32px;
+   width: 32px;
+   top: 20px;
+   left: 20px;
+   z-index: 5;
+   opacity: 0;
+   cursor: pointer;
+ }
+ 
+ .nav-container .hamburger-lines {
+   display: block;
+   height: 26px;
+   width: 32px;
+   position: absolute;
+   top: 17px;
+   left: 20px;
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+ 
+ .nav-container .hamburger-lines .line {
+   display: block;
+   height: 4px;
+   width: 100%;
+   border-radius: 10px;
+   background: rgb(255, 238, 0);
+ }
+ 
+ .nav-container .hamburger-lines .line1 {
+   transform-origin: 0% 0%;
+   transition: transform 0.4s ease-in-out;
+ }
+ 
+ .nav-container .hamburger-lines .line2 {
+   transition: transform 0.2s ease-in-out;
+ }
+ 
+ .nav-container .hamburger-lines .line3 {
+   transform-origin: 0% 100%;
+   transition: transform 0.4s ease-in-out;
+ }
+ 
+ .navbar .menu-items {
+   padding-top: 120px;
+ /*   box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5); */
+   background: #fbfcfa;
+   height: 100vh;
+   width: 85%;
+   transform: translate(-150%);
+   display: flex;
+   flex-direction: column;
+   margin-left: -40px;
+   padding-left: 50px;
+   transition: transform 0.5s ease-in-out;
+   text-align: center;
+   position: absolute;
+   z-index: 1;
+ }
+ 
+ .navbar .menu-items li {
+   margin-bottom: 1.2rem;
+   font-size: 1.5rem;
+   font-weight: 500;
+ }
+ 
+ .nav-container input[type="checkbox"]:checked ~ .menu-items {
+   transform: translateX(0);
+ }
+ 
+ .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+   transform: rotate(45deg);
+ }
+ 
+ .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+   transform: scaleY(0);
+ }
+ 
+ .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+   transform: rotate(-45deg);
+ }
+ 
+ .nav-container input[type="checkbox"]:checked ~ .logo{
+   display: none;
+ }
+ 
+ 
+
+
+}
+  
+
+
 /*!*******************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/home/home.css ***!
   \*******************************************************************************************************************************************************************************************************************************************************************/
