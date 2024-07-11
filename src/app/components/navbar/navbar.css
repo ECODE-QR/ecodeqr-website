@@ -5,7 +5,8 @@
     padding: 10px;
   }
    */
-.menu-items {
+   .menu-items {
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -332,4 +333,3 @@ ul li a:hover{
 
 }
   
-

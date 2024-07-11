@@ -1,13 +1,13 @@
+'use client'
 import Home from "./home/page";
 import Smiley from "./components/Smiley/Smiley";
 
-export default function main() {
+export default function Main() {
+ 
   return (
-    <main>
       <div>
         <Home/>
-        <Smiley  />
+        <Smiley/>
       </div>
-    </main>
   );
 }

@@ -5,6 +5,7 @@ import './navbar.css';
 import Link from 'next/link';
 
 export default function Navbar() {
+
     const [isOpen, setIsOpen] = useState(false);
   
     return (
@@ -23,3 +24,4 @@ export default function Navbar() {
       </nav>
     );
   }
+
