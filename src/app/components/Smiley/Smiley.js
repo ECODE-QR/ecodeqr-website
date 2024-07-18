@@ -13,7 +13,7 @@ export default function About() {
         </div>
         <div className="boxes">
         <div className="box1">Fashion but spread a message</div>
-        <div className="box2">Box 2</div>
+        <div className="box2">More Features Coming Soon!</div>
      </div>
      </div>
      </div>
