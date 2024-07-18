@@ -147,6 +147,32 @@ span {
 
   
 }
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/home/home.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
+.mainContainer{
+    justify-content: center;
+    background-color: black;
+    /* height: 100vh; */
+}
+.header{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: black;
+    height: 15vh;
+    padding: 3vh;
+}
+img{
+    width: 90vw;
+    object-fit: fill;
+}
+
+.EcodeGif {
+    width: 100%;
+    object-fit: fill;
+}
+
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/navbar/navbar.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
@@ -187,7 +213,6 @@ body {
   display: none;
   cursor: pointer;
   font-size: 24px;
-  z-index: 10;
 }
 
 .navbar-list {
@@ -217,11 +242,6 @@ body {
     display: block;
   }
 
-  .nav-container {
-    overflow-x: hidden;
-
-  }
-
   .navbar-list {
     display: none;
     flex-direction: column;
@@ -234,12 +254,10 @@ body {
     z-index: 9;
     justify-content: center;
     align-items: center;
-    
   }
 
   .navbar-list.open {
     display: flex;
-
   }
 
   .navbar-item {
@@ -255,36 +273,10 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: white;
-    
   }
 
   .close-btn:hover {
     color: yellow;
   }
 }
-
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/home/home.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
-.mainContainer{
-    justify-content: center;
-    background-color: black;
-    /* height: 100vh; */
-}
-.header{
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
-    background-color: black;
-    height: 15vh;
-    padding: 3vh;
-}
-img{
-    width: 90vw;
-    object-fit: fill;
-}
-/* 
-.EcodeGif {
-    overflow: auto;
-} */
 

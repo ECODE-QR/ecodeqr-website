@@ -35,7 +35,6 @@ body {
   display: none;
   cursor: pointer;
   font-size: 24px;
-  z-index: 10;
 }
 
 .navbar-list {
@@ -65,11 +64,6 @@ body {
     display: block;
   }
 
-  .nav-container {
-    overflow-x: hidden;
-
-  }
-
   .navbar-list {
     display: none;
     flex-direction: column;
@@ -82,12 +76,10 @@ body {
     z-index: 9;
     justify-content: center;
     align-items: center;
-    
   }
 
   .navbar-list.open {
     display: flex;
-
   }
 
   .navbar-item {
@@ -103,7 +95,6 @@ body {
     cursor: pointer;
     font-size: 24px;
     color: white;
-    
   }
 
   .close-btn:hover {

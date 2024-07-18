@@ -1,5 +1,4 @@
 // app.js
-'use Client'; 
 import React from 'react';
 import Story from '../slideShowFunction/slideShowFunction';
 
@@ -19,6 +18,7 @@ import Story from '../slideShowFunction/slideShowFunction';
 // // ];
 
 const App = () => {
+
   return (
     <div>
       <Story />
