@@ -173,26 +173,46 @@ img{
     object-fit: fill;
 }
 
+
+h1 {
+    @media(max-width: 767px) {
+        font-size:1.2rem;
+        color: rgb(243, 224, 99);
+    }
+}
 /*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./src/app/components/navbar/navbar.css ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************/
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Original Styling
 
-body {
-  font-family: "Poppins", sans-serif;
-  background: #050100;
-}
-
-/* Navbar Styles */
 .navbar {
-  background-color: #000000;
-  color: white;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.navbar-item {
+    color: white;
+    padding: 10px;
+  } */
+
+
+  /* Newer styling, could probably be simplified */
+  
+/* Existing styling */
+.navbar {
   display: flex;
+  width: 100vw;
+  height: 10vh;
+  color: white;
+  background-color: black;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -227,21 +247,155 @@ body {
 }
 
 .navbar-item a {
+  display: block;
+  cursor: pointer;
+  text-decoration: none; /* Ensure text decoration is none for clarity */
+  color: inherit; /* Inherit text color from parent */
+}
+
+/* Hover effect with literal 'char' brackets */
+
+/*
+
+.navbar-item a:hover::before {
+  content: '[';
+  margin-right: 5px; 
   color: white;
-  text-decoration: none;
 }
 
-.navbar-item a:hover {
+.navbar-item a:hover::after {
+  content: ']';
+  margin-left: 5px; 
+  color: white;
+}
+
+*/
+
+ul li a {
+  display: block;
+  cursor:context-menu;
+}
+
+/* .navbar-item li::before,
+ .navbar-item li::after{
+  content: "";
+  height: 10px;
+  width: 10px;
+  position: absolute;
+}
+
+.navbar-item li::before{
+  content:"";
+  right: 0;
+  top: 0px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+} */
+
+
+
+ul li a:hover{
+  display: block;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 238, 0);
+  font-size: 25px;
   font-weight: bold;
-  color: yellow;
+
+  /*bracket code*/
+  
+  --b: 5px;   /* thickness of the border */
+  --c: white;   /* color of the border */
+  --w: 20px;  /* width of border */
+  
+
+  border: var(--b) solid #0000; /* space for the border */
+  --_g: #0000 90deg,var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p);
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgba(148, 148, 148,0.2);
+  border-radius: 10px;
+  padding:0 5px 0 5px;
+}
+
+/* Hide items by default on mobile and show when menu is open */
+.navbar-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar-list.open {
+  flex-direction: column;
+}
+  
+/* Phones and smaller devices */
+
+@media only screen and (max-width:768px) {
+  .main {
+    padding-top: 150px;
   }
 
+  /* weird colors to help with positioning */
+  .navbar {
+    display: inline-block;
+    width: 0%;
+    height: 0%;
+    z-index: 1;
+  }
+
+  .navbar-list {
+    background-color: black;
+    width: 100vw;
+    position: relative;
+    display: inline-block;
+  }
+
+  .navbar-list.open{
+    display: inline-block;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 18vh;
+    height: 35vh;
+
+    z-index: 1;
+  }
+
+  .navbar-item {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    height: 52px;
+  }
+
+  .navbar-item a {
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+  }
+
+
+  /* menu button styles */
+  .menu-icon {
+    position:absolute;
+    left: 20px;
+    top: 10vh;
+    display: block;
+  }
+}
+  
+  /* can probably move these to the media query above */
+@media only screen and (max-width:768px) {
   .navbar-list {
     display: none;
     flex-direction: column;
@@ -262,21 +416,23 @@ body {
 
   .navbar-item {
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-  }
-
-  .close-btn:hover {
-    color: yellow;
+    margin: 5px 0;
   }
 }
 
+/* For tablets and small screen laptops */
+
+@media only screen and (min-width:769px) {
+  .navbar-list {
+    width: 80%;
+    flex-direction: row;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+
+}

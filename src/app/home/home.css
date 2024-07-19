@@ -20,3 +20,11 @@ img{
     width: 100%;
     object-fit: fill;
 }
+
+
+h1 {
+    @media(max-width: 767px) {
+        font-size:1.2rem;
+        color: rgb(243, 224, 99);
+    }
+}
