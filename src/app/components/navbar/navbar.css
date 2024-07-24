@@ -201,7 +201,8 @@ ul li a:hover{
  
  .navbar {
    width: 100%;
-   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+   /* box-shadow: 0 1px 4px rgb(146 161 176 / 15%); */
+   z-index: 10;
  }
  
  .nav-container {
@@ -209,10 +210,13 @@ ul li a:hover{
    justify-content: space-between;
    align-items: center;
    height: 62px;
+  
  }
  
  .navbar .menu-items {
    display: flex;
+   align-items: center;
+   justify-content: flex-start;
  }
  
  .navbar .nav-container li {
@@ -235,6 +239,7 @@ ul li a:hover{
    display: block;
    position: relative;
    height: 60px;
+   /* background-color: rgb(203, 203, 203); */
  }
  
  .nav-container .checkbox {

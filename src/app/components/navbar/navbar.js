@@ -16,6 +16,8 @@ export default function Navbar() {
         <li className="navbar-item"><Link href='/story1'>Story 1</Link></li>
         <li className="navbar-item"><Link href='/story2'>Story 2</Link></li>
         <li className="navbar-item"><Link href='/story3'>Story 3</Link></li>
+        <li className="navbar-item"><Link href='/story4'>Story 4</Link></li>
+        <li className="navbar-item"><Link href='/story5'>Story 5</Link></li>
       </ul>
     </nav>
   );
