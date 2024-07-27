@@ -48,7 +48,7 @@ const Image = styled.img`
   max-height: 90%;
 `;
 
-const Story = ({ images }) => {
+const Story = ({ images, renaissanceImages }) => {
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const imageDisplayDuration = 8000;
@@ -74,6 +74,8 @@ const Story = ({ images }) => {
     setIndex((prevIndex) => (prevIndex + 1) % images.length);
     setProgress(0);
   };
+
+
 
   return (
     <StoryContainer onClick={handleClick}>

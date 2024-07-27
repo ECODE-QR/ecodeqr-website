@@ -1,3 +1,4 @@
+
 .fullscreen-container {
     display: flex;
     justify-content: center;
@@ -13,3 +14,4 @@
     max-height: 100%;
     object-fit: contain; 
   }
+  
